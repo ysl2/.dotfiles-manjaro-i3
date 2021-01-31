@@ -9,4 +9,6 @@ public interface Definition {
         String LINK_FILES_SCRIPT_STRING = "/home/yusoli/.dotfiles/.RESTORE-BY-JAVA/assets/";
         // 用于输出冲突文件列表
         String CONFLICT_LOG = "conflict.sh";
+
+        String STOW_SHELL = "run-stow.sh";
 }

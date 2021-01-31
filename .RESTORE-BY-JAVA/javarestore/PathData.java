@@ -119,9 +119,9 @@ public class PathData implements Definition {
                 if (element.getValue().exists() && !Files.isSymbolicLink(element.getValue().toPath())) {
                     // 如果是真实文件，不删除，记录到冲突日志里，然后直接跳过
                     isConflict = true;
-                    fos.write(("sudo rm " + element.getValue().getAbsolutePath() + " && sudo ln -s "
-                            + element.getKey().getAbsolutePath() + " " + element.getValue().getAbsolutePath() + "\n")
-                                    .getBytes());
+                    // 下面这行是原先的
+                    // fos.write(("sudo rm " + element.getValue().getAbsolutePath() + " && sudo ln -s " + element.getKey().getAbsolutePath() + " " + element.getValue().getAbsolutePath() + "\n") .getBytes());
+                    fos.write(("sudo rm " + element.getValue().getAbsolutePath() + "\n") .getBytes());
                     continue;
                 } else if (element.getValue().exists()
                         && Files.isSymbolicLink(element.getValue().toPath().toAbsolutePath())) {
@@ -130,11 +130,8 @@ public class PathData implements Definition {
                     // ! Dangerous Operation
                     element.getValue().delete();
                 }
-                // 最终剩下的都是不含冲突且不存在的文件，就执行链接操作
-                System.out.println("[link file]created: " + element.getValue().getAbsolutePath());
-                // ! Dangerous Operation
-                Files.createSymbolicLink(element.getValue().toPath().toAbsolutePath(),
-                        element.getKey().toPath().toAbsolutePath());
+                // 创建软链接
+                // createMySymbolicLink(element.getKey(), element.getValue());
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -144,6 +141,22 @@ public class PathData implements Definition {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    /**
+     * 这是原先的方法。用于直接创建链接的。但是我发现通过java创建的链接不能被stow管理，因此单独分离出来作为方法，万一后面依然不好使，就用这个方法恢复
+     * @param key
+     * @param value
+     */
+    private static void createMySymbolicLink(File key, File value) {
+        // 最终剩下的都是不含冲突且不存在的文件，就执行链接操作
+        System.out.println("[link file]created: " + value.getAbsolutePath());
+        // ! Dangerous Operation
+        try {
+            Files.createSymbolicLink(value.toPath().toAbsolutePath(), key.toPath().toAbsolutePath());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -167,15 +180,17 @@ public class PathData implements Definition {
     }
 
     public void allDoneClean() {
+        // 就算没有冲突也不能直接删除assets文件夹了
         if (!isConflict) {
+            // 但是冲突文件依然需要删掉
             File conflictFile = new File(LINK_FILES_SCRIPT_STRING + CONFLICT_LOG);
             conflictFile.delete();
-            File conflictFolder = new File(LINK_FILES_SCRIPT_STRING);
-            conflictFolder.delete();
+            // File conflictFolder = new File(LINK_FILES_SCRIPT_STRING);
+            // conflictFolder.delete();
         } else {
-            try (BufferedWriter bos= new BufferedWriter(new FileWriter(LINK_FILES_SCRIPT_STRING + CONFLICT_LOG, true))) {
-                String s = "\n# 清理产生的冲突文件\nsudo rm " + LINK_FILES_SCRIPT_STRING + CONFLICT_LOG + "\n" + "sudo rm -r " + LINK_FILES_SCRIPT_STRING;
-                bos.write(s, 0, s.length());
+            // 如果发生冲突，就在最后加上删除自己的语句
+            try (BufferedWriter bw= new BufferedWriter(new FileWriter(LINK_FILES_SCRIPT_STRING + CONFLICT_LOG, true))) {
+                bw.write("\n# 清理产生的冲突文件\nsudo rm " + LINK_FILES_SCRIPT_STRING + CONFLICT_LOG + "\n");
             } catch (Exception e) {
                 e.printStackTrace();
             }

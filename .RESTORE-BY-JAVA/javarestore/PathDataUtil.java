@@ -1,6 +1,8 @@
 package javarestore;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.nio.file.Files;
 
 public class PathDataUtil implements Definition {
@@ -41,15 +43,30 @@ public class PathDataUtil implements Definition {
         if (files == null) {
             return;
         }
-        for (File f : files) {
-            if (f.getName().startsWith(".")) {
-                continue;
-            } else if (f.isFile()) {
-                // System.out.println(file.getName());
-                continue;
-            } else if (f.isDirectory()) {
-                getAllFiles(f, pathData);
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(LINK_FILES_SCRIPT_STRING + STOW_SHELL, true))) {
+            boolean flag = false;
+            for (File f : files) {
+                if (f.getName().startsWith(".")) {
+                    continue;
+                } else if (f.isFile()) {
+                    // System.out.println(file.getName());
+                    continue;
+                } else if (f.isDirectory()) {
+                    // 如果发现了文件夹， 并且之前没写过下面这句，则在开头加上这句。以后如果再发现文件夹就不写这句了
+                    if (flag == false) {
+                        bw.write("cd " + SOURCE_STRING + "\n");
+                        bw.flush();
+                        flag = true;
+                    }
+                    bw.write("stow -R " + f.getName() + "\n");
+                    bw.flush();
+                    getAllFiles(f, pathData);
+                }
             }
+            // 在最后加上删除自己的语句
+            bw.write("rm " + LINK_FILES_SCRIPT_STRING + STOW_SHELL);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
