@@ -1,5 +1,6 @@
 !! yusoli
-Xft.dpi:       150
+!! [command]reflash the changes:`xrdb merge .Xresources`
+Xft.dpi:       192
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
@@ -59,7 +60,7 @@ Xcursor.theme: xcursor-breeze
 Xcursor.size:                     0
 
 !! yusoli
-URxvt.font:                       xft:TerminessTTFNerdFontMono:pixelsize=26
+URxvt.font:                       xft:TerminessTTFNerdFontMono:pixelsize=35
 
 ! alternative font settings with 'terminus':
 ! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
