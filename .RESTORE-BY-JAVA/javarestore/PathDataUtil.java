@@ -43,6 +43,14 @@ public class PathDataUtil implements Definition {
         if (files == null) {
             return;
         }
+        File path = new File(LINK_FILES_SCRIPT_STRING);
+        if (!path.exists()) {
+            path.mkdirs();
+        }
+        File stowScript = new File(LINK_FILES_SCRIPT_STRING + STOW_SHELL);
+        if (stowScript.exists()) {
+            stowScript.delete();
+        }
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(LINK_FILES_SCRIPT_STRING + STOW_SHELL, true))) {
             boolean flag = false;
             for (File f : files) {
@@ -58,7 +66,7 @@ public class PathDataUtil implements Definition {
                         bw.flush();
                         flag = true;
                     }
-                    bw.write("stow -R " + f.getName() + "\n");
+                    bw.write("stow -R " + f.getName() + " && echo '[link stow]created: " + f.getName() + "'" + "\n");
                     bw.flush();
                     getAllFiles(f, pathData);
                 }

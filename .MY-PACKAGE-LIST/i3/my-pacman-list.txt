@@ -6,7 +6,6 @@ alsa-plugins
 alsa-utils
 apparmor
 arandr
-aria2
 artwork-i3
 autoconf
 automake
@@ -51,7 +50,6 @@ ffmpegthumbnailer
 file
 filesystem
 findutils
-firefox
 flac
 flex
 gawk
@@ -207,7 +205,6 @@ ttf-liberation
 upower
 usbutils
 util-linux
-v2ray
 vertex-maia-themes
 vi
 vibrancy-icons-teal

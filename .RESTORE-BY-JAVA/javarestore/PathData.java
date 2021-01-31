@@ -189,7 +189,7 @@ public class PathData implements Definition {
             // conflictFolder.delete();
         } else {
             // 如果发生冲突，就在最后加上删除自己的语句
-            try (BufferedWriter bw= new BufferedWriter(new FileWriter(LINK_FILES_SCRIPT_STRING + CONFLICT_LOG, true))) {
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(LINK_FILES_SCRIPT_STRING + CONFLICT_LOG, true))) {
                 bw.write("\n# 清理产生的冲突文件\nsudo rm " + LINK_FILES_SCRIPT_STRING + CONFLICT_LOG + "\n");
             } catch (Exception e) {
                 e.printStackTrace();
