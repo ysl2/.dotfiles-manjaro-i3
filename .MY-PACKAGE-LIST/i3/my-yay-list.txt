@@ -23,6 +23,7 @@ btrfs-progs
 bzip2
 cantarell-fonts
 chromium
+cht.sh
 clipit
 coreutils
 cpupower
@@ -218,6 +219,7 @@ util-linux
 vertex-maia-themes
 vibrancy-icons-teal
 viewnior
+visual-studio-code-bin
 vlc
 volumeicon
 w3m
