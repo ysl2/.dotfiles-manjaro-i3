@@ -191,6 +191,7 @@ spice-vdagent
 stow
 subversion
 sudo
+switchhosts-bin
 sysfsutils
 syslog-ng
 systemd
