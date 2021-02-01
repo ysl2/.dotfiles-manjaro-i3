@@ -178,6 +178,7 @@ perl
 perl-file-mimeinfo
 pkgconf
 polkit-gnome
+polybar
 poppler-data
 powerpill
 powertop
