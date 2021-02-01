@@ -142,6 +142,7 @@ mousepad
 nano
 ncdu
 neovim
+neovim-symlinks
 netctl
 network-manager-applet
 networkmanager
@@ -213,10 +214,8 @@ upower
 usbutils
 util-linux
 vertex-maia-themes
-vi
 vibrancy-icons-teal
 viewnior
-vim
 vlc
 volumeicon
 w3m
@@ -227,6 +226,7 @@ wmutils
 wpa_supplicant
 xarchiver
 xautolock
+xclip
 xcursor-chameleon-pearl
 xcursor-maia
 xdg-user-dirs
