@@ -141,6 +141,7 @@ morc_menu
 mousepad
 nano
 ncdu
+neovim
 netctl
 network-manager-applet
 networkmanager
