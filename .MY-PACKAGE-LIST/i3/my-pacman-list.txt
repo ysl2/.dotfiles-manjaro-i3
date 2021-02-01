@@ -6,6 +6,7 @@ alsa-plugins
 alsa-utils
 apparmor
 arandr
+archlinuxcn-keyring
 artwork-i3
 autoconf
 automake
@@ -61,6 +62,7 @@ gimp
 git
 glibc
 gnome-keyring
+google-chrome
 gparted
 grep
 grub
@@ -167,11 +169,13 @@ perl-file-mimeinfo
 pkgconf
 polkit-gnome
 poppler-data
+powerpill
 powertop
 procps-ng
 psmisc
 qt5-styleplugins
 qt5ct
+qv2ray
 ranger
 reiserfsprogs
 rsync

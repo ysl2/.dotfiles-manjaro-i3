@@ -33,6 +33,7 @@ LibAppArmor
 louis
 Mako
 MarkupSafe
+MemoizeDB
 msgpack
 netsnmp-python
 npyscreen
@@ -43,8 +44,11 @@ pep517
 Pillow
 pip
 ply
+pm2ml
+Powerpill
 progress
 psutil
+pyalpm
 pyaml
 pyasn1
 pyasn1-modules
@@ -81,4 +85,6 @@ ueberzug
 ufw
 urllib3
 webencodings
+XCGF
+XCPF
 zope.interface
