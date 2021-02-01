@@ -97,7 +97,6 @@ inxi
 iproute2
 iputils
 jfsutils
-kitty
 kvantum-manjaro
 less
 lib32-flex
@@ -210,7 +209,6 @@ systemd
 systemd-fsck-silent
 systemd-sysvcompat
 tar
-tempus-themes-kitty-git
 terminus-font
 texinfo
 tlp

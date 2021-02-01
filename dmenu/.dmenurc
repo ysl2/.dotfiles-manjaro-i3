@@ -18,10 +18,10 @@ DMENU_FN="Noto-10.5"
 #DMENU_SF="#F9FAF9"
 
 ## background colour for unselected menu-items
-DMENU_NB="#EFEFEF"
+DMENU_NB="#222D31"
 
 ## textcolour for unselected menu-items
-DMENU_NF="#767676"
+DMENU_NF="#F9FAF9"
 
 ## background colour for selected menu-items
 DMENU_SB="#DDE3F4"
