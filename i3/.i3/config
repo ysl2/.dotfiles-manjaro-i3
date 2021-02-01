@@ -35,7 +35,8 @@ floating_modifier $mod
 # yusoli
 # start a terminal
 #bindsym $mod+Return exec terminal
-bindsym $mod+Return exec --no-startup-id kitty
+#bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill

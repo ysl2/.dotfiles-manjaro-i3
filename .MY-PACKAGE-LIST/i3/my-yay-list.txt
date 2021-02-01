@@ -1,6 +1,7 @@
 accountsservice
 acpi
 acpid
+alacritty
 alsa-firmware
 alsa-plugins
 alsa-utils
@@ -209,6 +210,7 @@ systemd
 systemd-fsck-silent
 systemd-sysvcompat
 tar
+tempus-themes-kitty-git
 terminus-font
 texinfo
 tlp
