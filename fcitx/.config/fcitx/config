@@ -1,6 +1,6 @@
 [Hotkey]
 # Trigger Input Method
-TriggerKey=CTRL_SHIFT_LCTRL CTRL_SHIFT_LSHIFT
+TriggerKey=CTRL_SHIFT_LSHIFT CTRL_SHIFT_LCTRL
 # Use extra trigger key only after using it to inactivate
 # Available Value:
 # True False
