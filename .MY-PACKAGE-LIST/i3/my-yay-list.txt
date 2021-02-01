@@ -48,6 +48,10 @@ epdfview
 exfat-utils
 f2fs-tools
 fakeroot
+fcitx
+fcitx-configtool
+fcitx-libpinyin
+fcitx-qt5
 fd
 ffmpeg
 ffmpegthumbnailer

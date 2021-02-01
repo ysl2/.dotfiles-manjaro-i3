@@ -307,7 +307,7 @@ exec_always --no-startup-id fix_xcursor
 ## 登陆时启动polybar
 #exec --no-startup-id  ~/.config/polybar/launch.sh
 ##登录时启动fcitx
-#exec --no-startup-id fcitx
+exec --no-startup-id fcitx
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
