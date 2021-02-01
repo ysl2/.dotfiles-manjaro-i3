@@ -82,35 +82,33 @@ noremap <leader>PC :PlugClean<CR>
 " === Plugin list
 " ===
 call plug#begin('~/.config/nvim/plugged')
-Plug 'jiangmiao/auto-pairs'
+Plug 'https://hub.fastgit.org/chun-yang/auto-pairs.git'
 
-Plug 'tpope/vim-surround'
+Plug 'https://hub.fastgit.org/anyakichi/vim-surround.git'
 
-Plug 'justinmk/vim-sneak'
+Plug 'https://hub.fastgit.org/justinmk/vim-sneak.git'
 
-Plug 'easymotion/vim-easymotion'
+Plug 'https://hub.fastgit.org/skwp/vim-easymotion.git'
 
-Plug 'vim-airline/vim-airline'
+Plug 'https://hub.fastgit.org/vim-airline/vim-airline.git'
 
-Plug 'scrooloose/nerdtree'
+Plug 'https://hub.fastgit.org/preservim/nerdtree.git'
 
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'https://hub.fastgit.org/xuyuanp/nerdtree-git-plugin.git'
 
-Plug 'justinmk/vim-sneak'
+Plug 'https://hub.fastgit.org/morhetz/gruvbox.git'
 
-Plug 'morhetz/gruvbox'
-
-Plug 'luochen1990/rainbow'
+Plug 'https://hub.fastgit.org/luochen1990/rainbow.git'
 " Switch between Chinese and English
-Plug 'rlue/vim-barbaric'
+Plug 'https://hub.fastgit.org/rlue/vim-barbaric.git'
 
-Plug 'junegunn/fzf.vim'
+Plug 'https://hub.fastgit.org/junegunn/fzf.vim.git'
 " ranger的依赖插件
-Plug 'rbgrouleff/bclose.vim'
+Plug 'https://hub.fastgit.org/rbgrouleff/bclose.vim.git'
 
-Plug 'francoiscabrol/ranger.vim'
+Plug 'https://hub.fastgit.org/francoiscabrol/ranger.vim.git'
 
-Plug 'neoclide/coc.nvim'
+Plug 'https://hub.fastgit.org/neoclide/coc.nvim.git'
 call plug#end()
 
 
