@@ -26,8 +26,10 @@ font xft:URWGothic-Book 11
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
+# yusoli
 # start a terminal
-bindsym $mod+Return exec terminal
+#bindsym $mod+Return exec terminal
+bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
