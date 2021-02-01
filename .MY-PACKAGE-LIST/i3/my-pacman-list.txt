@@ -22,6 +22,7 @@ bmenu
 btrfs-progs
 bzip2
 cantarell-fonts
+chromium
 clipit
 coreutils
 cpupower
@@ -46,6 +47,7 @@ epdfview
 exfat-utils
 f2fs-tools
 fakeroot
+fd
 ffmpeg
 ffmpegthumbnailer
 file
@@ -62,7 +64,6 @@ gimp
 git
 glibc
 gnome-keyring
-google-chrome
 gparted
 grep
 grub
