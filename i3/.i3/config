@@ -11,6 +11,12 @@ set $mod Mod4
 default_border pixel 1
 default_floating_border normal
 
+##设置窗口边框等等
+#new_window none
+#new_float normal
+#hide_edge_borders both
+#
+
 # Hide borders
 hide_edge_borders none
 
@@ -36,6 +42,8 @@ bindsym $mod+Shift+q kill
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id dmenu_recency
+#设置快捷程序启动为rofi
+#bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -58,9 +66,9 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
+bindsym $mod+F2 exec chromium
+#bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
@@ -71,6 +79,9 @@ bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+## 设置截图快捷键 ,先安装mate-utils, sudo pacman -S mate-utils
+#bindsym $mod+p  exec  mate-screenshot -i
+#
 
 # focus_follows_mouse no
 
@@ -285,10 +296,18 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-# yusoli
+# yusoli:
 #exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+##登录时 启用窗口透明
+#exec --no-startup-id compton -b
+##登陆时 随机选择壁纸 ，~/Pictures/DesktopBackground 下要放几张图片
+#exec --no-startup-id feh --randomize --bg-fill ~/Pictures/DesktopBackground 
+## 登陆时启动polybar
+#exec --no-startup-id  ~/.config/polybar/launch.sh
+##登录时启动fcitx
+#exec --no-startup-id fcitx
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -321,6 +340,7 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
+# 关掉i3bar
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
@@ -370,6 +390,9 @@ bindsym $mod+m bar mode toggle
 # Set inner/outer gaps
 gaps inner 14
 gaps outer -2
+##设置窗口间距
+#gaps inner 8
+#gaps outer 6
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
