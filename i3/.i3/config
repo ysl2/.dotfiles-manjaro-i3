@@ -442,3 +442,20 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+###############################
+### settings for alacritty: ###
+###############################
+
+set $color_dir ~/.config/alacritty/themes
+set $light_color Gruvbox-Light.yml
+set $dark_color Gruvbox-Dark.yml
+#alacritty-colorscheme -C ~/.config/alacritty/themes -t Gruvbox-Light.yml Gruvbox-Dark.yml
+# Toggle between light and dark colorscheme
+bindsym $mod+Shift+n exec alacritty-colorscheme -C $color_dir -t $light_color $dark_color
+
+# Toggle between all available colorscheme
+bindsym $mod+Shift+m exec alacritty-colorscheme -C $color_dir -T
+
+# Get notification with current colorscheme
+#bindsym $mod+Shift+b exec notify-send "Alacritty Colorscheme" `alacritty-colorscheme -C $color_dir -s`
