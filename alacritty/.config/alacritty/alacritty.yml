@@ -264,8 +264,8 @@ colors:
     background: '#b2ceee'
 
    # Normal colors
-    background_opacity: 0.70
-   #background_opacity: 1.0
+    background_opacity: 0.75
+    #background_opacity: 1.0
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

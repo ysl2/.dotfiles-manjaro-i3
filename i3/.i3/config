@@ -309,9 +309,12 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#
+##登录时 启用窗口透明
 #exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-#exec --no-startup-id picom -b
-exec --no-startup-id compton -b
+exec --no-startup-id picom -b
+#exec --no-startup-id compton -b
+#
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -329,8 +332,6 @@ exec_always --no-startup-id fix_xcursor
 exec --no-startup-id feh --randomize --bg-fill ~/.dotfiles/.WALLPAPERS
 ## 登陆时启动polybar
 exec --no-startup-id  ~/.config/polybar/launch.sh
-##登录时 启用窗口透明
-exec --no-startup-id compton -b
 ##登录时启动fcitx
 exec --no-startup-id fcitx
 # 登录时启用截图工具
