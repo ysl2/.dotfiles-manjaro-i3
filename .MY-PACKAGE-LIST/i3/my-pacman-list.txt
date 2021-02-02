@@ -56,12 +56,14 @@ fcitx-configtool
 fcitx-libpinyin
 fcitx-qt5
 fd
+feh
 ffmpeg
 ffmpegthumbnailer
 file
 filesystem
 findutils
 flac
+flameshot
 flex
 gawk
 gcc
