@@ -1,5 +1,6 @@
 Package
--------------------
+---------------------
+alacritty-colorscheme
 apparmor
 appdirs
 application-utility
@@ -73,6 +74,8 @@ reportlab
 requests
 resolvelib
 retrying
+ruamel.yaml
+ruamel.yaml.clib
 service-identity
 setproctitle
 setuptools

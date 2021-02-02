@@ -2,6 +2,8 @@ accountsservice
 acpi
 acpid
 alacritty
+alacritty-colorscheme
+alacritty-themes
 alsa-firmware
 alsa-plugins
 alsa-utils
