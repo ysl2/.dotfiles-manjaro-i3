@@ -34,7 +34,6 @@ floating_modifier $mod
 # yusoli
 # start a terminal
 bindsym $mod+Return exec --no-startup-id alacritty
-#bindsym $mod+Return exec urxvt -sh 40
 
 # kill focused window
 bindsym $mod+Shift+q kill
