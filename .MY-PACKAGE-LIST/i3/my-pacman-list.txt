@@ -2,8 +2,6 @@ accountsservice
 acpi
 acpid
 alacritty
-alacritty-colorscheme
-alacritty-themes
 alsa-firmware
 alsa-plugins
 alsa-utils
@@ -56,14 +54,12 @@ fcitx-configtool
 fcitx-libpinyin
 fcitx-qt5
 fd
-feh
 ffmpeg
 ffmpegthumbnailer
 file
 filesystem
 findutils
 flac
-flameshot
 flex
 gawk
 gcc
