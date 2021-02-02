@@ -447,8 +447,8 @@ mode "$mode_gaps_outer" {
 ### settings for alacritty: ###
 ###############################
 
-set $color_dir ~/.config/alacritty/themes
-set $light_color Gruvbox-Light.yml
+set $color_dir /usr/lib/node_modules/alacritty-themes/themes
+set $light_color Grubox-Light.yml
 set $dark_color Gruvbox-Dark.yml
 #alacritty-colorscheme -C ~/.config/alacritty/themes -t Gruvbox-Light.yml Gruvbox-Dark.yml
 # Toggle between light and dark colorscheme
