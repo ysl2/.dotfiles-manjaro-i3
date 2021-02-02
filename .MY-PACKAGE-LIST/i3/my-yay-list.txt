@@ -54,6 +54,7 @@ fcitx-configtool
 fcitx-libpinyin
 fcitx-qt5
 fd
+feh
 ffmpeg
 ffmpegthumbnailer
 file
