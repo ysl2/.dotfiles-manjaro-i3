@@ -13,4 +13,4 @@ yay -Qeq > my-yay-list.txt
 pip list | awk '{print $1}' > my-pip-list.txt
 
 cd /home/yusoli/.dotfiles/
-git add . > /dev/null && git commit -m "$(date +"%Y-%m-%d %H:%M:%S")" > /dev/null && git push origin master -q > /dev/null
+git add .MY-PACKAGE-LIST/i3/* > /dev/null && git commit -m "$(date +"%Y-%m-%d %H:%M:%S")" > /dev/null && git push origin master -q > /dev/null
