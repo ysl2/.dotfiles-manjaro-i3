@@ -1,6 +1,0 @@
-#!/bin/sh -e
-# /etc/rc.local
-for rcscript in $(ls /etc/rc.local.d); do
-	sh /etc/rc.local.d/${rcscript}
-done
-unset rcscript
