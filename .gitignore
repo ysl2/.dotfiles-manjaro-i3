@@ -5,4 +5,3 @@ nvim/.config/nvim/tmp/
 *.class
 my-git-upload.sh
 my-package-upload.sh
-.RESTORE-BY-JAVA
