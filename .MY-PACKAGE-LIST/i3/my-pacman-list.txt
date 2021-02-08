@@ -52,6 +52,10 @@ epdfview
 exfat-utils
 f2fs-tools
 fakeroot
+fcitx
+fcitx-configtool
+fcitx-googlepinyin
+fcitx-qt5
 fd
 feh
 ffmpeg
