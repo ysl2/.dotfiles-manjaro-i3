@@ -103,6 +103,7 @@ iproute2
 iputils
 jfsutils
 kvantum-manjaro
+lazygit
 less
 lib32-flex
 lib32-mesa-demos
