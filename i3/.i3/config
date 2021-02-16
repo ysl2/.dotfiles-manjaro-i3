@@ -374,7 +374,8 @@ set_from_resource $term_color15    color15
 bar {
 	i3bar_command i3bar
 	status_command i3status
-	position bottom
+	#position bottom
+	position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
@@ -472,19 +473,19 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-###############################
-### settings for alacritty: ###
-###############################
-
-set $color_dir /usr/lib/node_modules/alacritty-themes/themes
-set $light_color Simple_rainbow.yml
-set $dark_color Gruvbox-Dark.yml
-#alacritty-colorscheme -C ~/.config/alacritty/themes -t Gruvbox-Light.yml Gruvbox-Dark.yml
-# Toggle between light and dark colorscheme
-bindsym $mod+Shift+n exec alacritty-colorscheme -C $color_dir -t $light_color $dark_color
-
-# Toggle between all available colorscheme
-bindsym $mod+Shift+m exec alacritty-colorscheme -C $color_dir -T
-
-# Get notification with current colorscheme
-bindsym $mod+Shift+o exec notify-send "Alacritty Colorscheme" `alacritty-colorscheme -C $color_dir -s`
+################################
+#### settings for alacritty: ###
+################################
+#
+#set $color_dir /usr/lib/node_modules/alacritty-themes/themes
+#set $light_color Simple_rainbow.yml
+#set $dark_color Gruvbox-Dark.yml
+##alacritty-colorscheme -C ~/.config/alacritty/themes -t Gruvbox-Light.yml Gruvbox-Dark.yml
+## Toggle between light and dark colorscheme
+#bindsym $mod+Shift+n exec alacritty-colorscheme -C $color_dir -t $light_color $dark_color
+#
+## Toggle between all available colorscheme
+#bindsym $mod+Shift+m exec alacritty-colorscheme -C $color_dir -T
+#
+## Get notification with current colorscheme
+#bindsym $mod+Shift+o exec notify-send "Alacritty Colorscheme" `alacritty-colorscheme -C $color_dir -s`
